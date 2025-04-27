@@ -4,13 +4,26 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
-    title: 'Software Developer',
-    company: 'Tech Company',
-    period: '2022 - Present',
-    description: 'Working on full-stack web development projects using modern technologies.',
-    technologies: ['React', 'Node.js', 'TypeScript', 'AWS'],
+    title: 'Senior Full Stack Developer',
+    company: 'InnovaTech Solutions',
+    period: '2021 - Present',
+    description: 'Lead developer for enterprise-level web applications, managing a team of 5 developers and implementing modern development practices.',
+    technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'Docker', 'MongoDB'],
   },
-  // Add more experiences here
+  {
+    title: 'Software Engineer',
+    company: 'Digital Dynamics',
+    period: '2019 - 2021',
+    description: 'Developed and maintained multiple client-facing applications, improving performance and implementing new features.',
+    technologies: ['Vue.js', 'Python', 'PostgreSQL', 'Redis', 'GraphQL'],
+  },
+  {
+    title: 'Junior Developer',
+    company: 'WebTech Innovations',
+    period: '2018 - 2019',
+    description: 'Collaborated on various web development projects, focusing on front-end development and UI/UX improvements.',
+    technologies: ['JavaScript', 'HTML/CSS', 'React', 'Bootstrap', 'Git'],
+  },
 ]
 
 export default function Experience() {

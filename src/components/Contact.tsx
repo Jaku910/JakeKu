@@ -94,12 +94,18 @@ export default function Contact() {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/jake-ku"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors"
               >
                 LinkedIn
+              </a>
+              <a
+                href="mailto:jake.ku@example.com"
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                Email
               </a>
             </div>
           </motion.div>

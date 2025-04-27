@@ -4,12 +4,23 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    title: 'Portfolio Website',
-    description: 'A modern portfolio website built with Next.js and Tailwind CSS.',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    link: '#',
+    title: 'Personal Portfolio',
+    description: 'A modern, responsive portfolio website built with Next.js 14, featuring smooth animations and dark mode support.',
+    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'GSAP'],
+    link: 'https://github.com/Jaku910/JakeKu',
   },
-  // Add more projects here
+  {
+    title: 'E-commerce Platform',
+    description: 'A full-stack e-commerce solution with real-time inventory management and secure payment processing.',
+    tech: ['React', 'Node.js', 'MongoDB', 'Stripe API', 'Redux'],
+    link: 'https://github.com/Jaku910/ecommerce-platform',
+  },
+  {
+    title: 'Task Management App',
+    description: 'A collaborative task management application with real-time updates and team collaboration features.',
+    tech: ['Vue.js', 'Firebase', 'Vuex', 'Material UI', 'WebSocket'],
+    link: 'https://github.com/Jaku910/task-manager',
+  },
 ]
 
 export default function Projects() {

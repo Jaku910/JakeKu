@@ -17,7 +17,7 @@ export default function About() {
             Hi, I'm <span className="text-primary">Jake Ku</span>
           </h1>
           <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
-            A passionate software developer focused on creating beautiful and functional web applications.
+            A Full Stack Developer specializing in modern web technologies. I blend technical expertise with creative problem-solving to build elegant, user-centric applications.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a
