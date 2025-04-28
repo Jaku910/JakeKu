@@ -3,11 +3,11 @@
 export default function Resume() {
   return (
     <section className="max-w-4xl mx-auto px-6 py-12">
-      <div className="space-y-12">
+      <div className="space-y-16">
         {/* Education */}
         <div>
-          <h2 className="text-2xl font-light mb-6">EDUCATION</h2>
-          <div className="space-y-6">
+          <h2 className="text-2xl font-light mb-8">EDUCATION</h2>
+          <div className="space-y-8">
             <div>
               <h3 className="text-lg font-medium">Bachelor of Arts in Informatics, Concentration: Data Science</h3>
               <p className="text-gray-600">University of Washington, Minor: Data Science</p>
@@ -25,7 +25,7 @@ export default function Resume() {
 
         {/* Skills */}
         <div>
-          <h2 className="text-2xl font-light mb-6">SKILLS</h2>
+          <h2 className="text-2xl font-light mb-8">SKILLS</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-lg font-medium mb-2">Programming Languages:</h3>
@@ -40,13 +40,13 @@ export default function Resume() {
 
         {/* Experience */}
         <div>
-          <h2 className="text-2xl font-light mb-6">EXPERIENCE</h2>
-          <div className="space-y-8">
+          <h2 className="text-2xl font-light mb-8">EXPERIENCE</h2>
+          <div className="space-y-12">
             <div>
               <h3 className="text-lg font-medium">IT Student Consultant</h3>
               <p className="text-gray-600">University of Washington Information Technology</p>
               <p className="text-gray-600">Seattle, WA • June 2024 – Present</p>
-              <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1">
+              <ul className="mt-2 text-gray-600 space-y-2">
                 <li>Provided Tier 1 technical support to over 80,000 UW students, staff, faculty, and affiliates.</li>
                 <li>Developing and utilizing skills in observation and analysis to diagnose and resolve 90% of technical issues.</li>
                 <li>Providing support for Microsoft Windows, Mac, and Unix-based operating systems.</li>
@@ -57,7 +57,7 @@ export default function Resume() {
               <h3 className="text-lg font-medium">Research Assistant</h3>
               <p className="text-gray-600">University of Washington, Linguistics Department</p>
               <p className="text-gray-600">Seattle, WA • June 2024 – Present</p>
-              <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1">
+              <ul className="mt-2 text-gray-600 space-y-2">
                 <li>Recruiting, scheduling, and running over 45+ participants through experimental protocols to ensure reliable data collection to investigate eye movement patterns in Korean Language readers.</li>
                 <li>Utilized R and Excel for data analysis and visualization, enabling insights that improved report accuracy by 20% and streamlined decision-making processes.</li>
               </ul>
@@ -67,7 +67,7 @@ export default function Resume() {
               <h3 className="text-lg font-medium">Graphic Design Lead</h3>
               <p className="text-gray-600">University of Washington (Korean Student Association)</p>
               <p className="text-gray-600">Seattle, WA • November 2023 - Present</p>
-              <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1">
+              <ul className="mt-2 text-gray-600 space-y-2">
                 <li>Led and initiated team members to create graphic content through Figma that could be conveyed towards marketing the Korean Student Association (KSA) to over 1,000 members.</li>
                 <li>Fostered a positive, collaborative community as a KSA officer through Korean culture.</li>
               </ul>
@@ -77,7 +77,7 @@ export default function Resume() {
               <h3 className="text-lg font-medium">IT Intern</h3>
               <p className="text-gray-600">Federal Way Public Schools: Information Technology</p>
               <p className="text-gray-600">Federal Way, WA • June 2019 – August 2023</p>
-              <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1">
+              <ul className="mt-2 text-gray-600 space-y-2">
                 <li>Collaborated with others interns to image, break fix, and operate technological systems, needed for over 20,000 students in the Federal Way Public School districts.</li>
                 <li>Improved technical skills and professionalism through teamwork and self-projects.</li>
                 <li>Strengthened my communication abilities and learned how to collaborate and work.</li>
@@ -88,8 +88,8 @@ export default function Resume() {
 
         {/* Projects */}
         <div>
-          <h2 className="text-2xl font-light mb-6">PROJECTS</h2>
-          <div className="space-y-8">
+          <h2 className="text-2xl font-light mb-8">PROJECTS</h2>
+          <div className="space-y-12">
             <div>
               <h3 className="text-lg font-medium">Edu4All</h3>
               <p className="text-gray-600">Figma, Research • September 2023 – December 2023</p>
@@ -112,8 +112,8 @@ export default function Resume() {
 
         {/* Certifications */}
         <div>
-          <h2 className="text-2xl font-light mb-6">CERTIFICATIONS</h2>
-          <ul className="list-disc list-inside text-gray-600 space-y-2">
+          <h2 className="text-2xl font-light mb-8">CERTIFICATIONS</h2>
+          <ul className="text-gray-600 space-y-2">
             <li>AT&T 2024 Technology Academy Certification (June 2024)</li>
             <li>Harvard CS50 Completion Certificate (June 2020)</li>
             <li>HP Hardware Diagnostics Qualification Exam (April 2019)</li>
