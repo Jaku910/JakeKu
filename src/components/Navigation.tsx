@@ -6,6 +6,14 @@ import Link from 'next/link'
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      setIsMenuOpen(false) // Close mobile menu after clicking
+    }
+  }
+
   return (
     <nav className="fixed top-0 left-0 w-full p-6 z-50">
       <div className="flex justify-between items-center">
@@ -14,18 +22,30 @@ export default function Navigation() {
         </Link>
         
         <div className="hidden md:flex space-x-8">
-          <Link href="#works" className="text-sm hover:opacity-50 transition-opacity">
+          <button 
+            onClick={() => scrollToSection('works')}
+            className="text-sm hover:opacity-50 transition-opacity"
+          >
             Works
-          </Link>
-          <Link href="#about" className="text-sm hover:opacity-50 transition-opacity">
+          </button>
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="text-sm hover:opacity-50 transition-opacity"
+          >
             About
-          </Link>
-          <Link href="#projects" className="text-sm hover:opacity-50 transition-opacity">
+          </button>
+          <button 
+            onClick={() => scrollToSection('projects')}
+            className="text-sm hover:opacity-50 transition-opacity"
+          >
             Projects
-          </Link>
-          <Link href="#contact" className="text-sm hover:opacity-50 transition-opacity">
+          </button>
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="text-sm hover:opacity-50 transition-opacity"
+          >
             Contact
-          </Link>
+          </button>
         </div>
 
         <button 
@@ -41,18 +61,30 @@ export default function Navigation() {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white p-6">
           <div className="flex flex-col space-y-4">
-            <Link href="#works" className="text-sm hover:opacity-50 transition-opacity">
+            <button 
+              onClick={() => scrollToSection('works')}
+              className="text-sm hover:opacity-50 transition-opacity"
+            >
               Works
-            </Link>
-            <Link href="#about" className="text-sm hover:opacity-50 transition-opacity">
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-sm hover:opacity-50 transition-opacity"
+            >
               About
-            </Link>
-            <Link href="#projects" className="text-sm hover:opacity-50 transition-opacity">
+            </button>
+            <button 
+              onClick={() => scrollToSection('projects')}
+              className="text-sm hover:opacity-50 transition-opacity"
+            >
               Projects
-            </Link>
-            <Link href="#contact" className="text-sm hover:opacity-50 transition-opacity">
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="text-sm hover:opacity-50 transition-opacity"
+            >
               Contact
-            </Link>
+            </button>
           </div>
         </div>
       )}
