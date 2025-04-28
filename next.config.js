@@ -8,6 +8,7 @@ const nextConfig = {
   trailingSlash: true, // This helps with static hosting
   basePath: process.env.NODE_ENV === 'production' ? '/JakeKu' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/JakeKu/' : '',
+  distDir: 'out',
   // Disable features that require a Node.js server
   webpack: (config) => {
     config.resolve.fallback = { fs: false, path: false };
