@@ -33,7 +33,7 @@ export default function Resume() {
     <section className={`max-w-4xl mx-auto px-6 py-12 ${isVisible ? 'visible' : ''}`}>
       <div className="space-y-16">
         {/* Education */}
-        <div className="interactive">
+        <div id="education" className="interactive">
           <h2 className="text-2xl font-light mb-8">EDUCATION</h2>
           <div className="space-y-8">
             <div>
@@ -52,7 +52,7 @@ export default function Resume() {
         </div>
 
         {/* Skills */}
-        <div className="interactive">
+        <div id="skills" className="interactive">
           <h2 className="text-2xl font-light mb-8">SKILLS</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -67,7 +67,7 @@ export default function Resume() {
         </div>
 
         {/* Experience */}
-        <div className="interactive">
+        <div id="experience" className="interactive">
           <h2 className="text-2xl font-light mb-8">EXPERIENCE</h2>
           <div className="space-y-12">
             <div>
@@ -115,7 +115,7 @@ export default function Resume() {
         </div>
 
         {/* Projects */}
-        <div className="interactive">
+        <div id="projects" className="interactive">
           <h2 className="text-2xl font-light mb-8">PROJECTS</h2>
           <div className="space-y-12">
             <div>
@@ -139,7 +139,7 @@ export default function Resume() {
         </div>
 
         {/* Certifications */}
-        <div className="interactive">
+        <div id="certifications" className="interactive">
           <h2 className="text-2xl font-light mb-8">CERTIFICATIONS</h2>
           <ul className="text-gray-600 space-y-2">
             <li>AT&T 2024 Technology Academy Certification (June 2024)</li>

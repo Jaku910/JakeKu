@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -13,15 +14,12 @@ export default function Hero() {
     <section className={`min-h-screen flex items-center justify-center px-6 ${isVisible ? 'visible' : ''}`}>
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-light mb-6 interactive">
-          Jake Ku
+          Hello, I'm Jake Ku
         </h1>
         <p className="text-lg md:text-xl text-gray-600 mb-6 max-w-2xl mx-auto interactive">
-          Informatics major with a minor in Data Science at the University of Washington.
+          A passionate Informatics & Data Science student at UW, dedicated to creating meaningful impact through technology
         </p>
-        <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto interactive">
-          Passionate about human interaction, data analytics, and technology that improves lives.
-        </p>
-        <div className="flex justify-center space-x-6">
+        <div className="flex justify-center space-x-6 mb-12">
           <a 
             href="mailto:jkmku10@gmail.com" 
             className="text-sm interactive"
@@ -42,6 +40,23 @@ export default function Hero() {
           >
             linkedin.com/in/jake-ku
           </a>
+        </div>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link href="#education" className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive">
+            Education
+          </Link>
+          <Link href="#skills" className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive">
+            Skills
+          </Link>
+          <Link href="#experience" className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive">
+            Experience
+          </Link>
+          <Link href="#projects" className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive">
+            Projects
+          </Link>
+          <Link href="#certifications" className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive">
+            Certifications
+          </Link>
         </div>
       </div>
     </section>
