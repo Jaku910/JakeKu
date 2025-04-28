@@ -5,24 +5,30 @@ import { motion } from 'framer-motion'
 const projects = [
   {
     title: 'Edu4All',
-    description: 'Online College Resource website targeted towards underprivileged and unrepresented communities.',
+    description: [
+      'Online College Resource website targeted towards underprivileged and unrepresented communities.',
+      'Provides resources and opportunities to students who may lack these resources.'
+    ],
     tech: ['Figma', 'Research'],
     period: 'September 2023 – December 2023',
-    link: '#',
   },
   {
     title: 'Michelin-Starred Restaurants Analysis',
-    description: 'Data analysis project investigating disparities between countries with and without Michelin-starred establishments.',
+    description: [
+      'Project which involved analyzing information from various sources, including media and literature, and data analytics.',
+      'Investigated significant disparities between countries with and without Michelin-starred establishments.'
+    ],
     tech: ['RStudio', 'Data Mining'],
     period: 'September 2023 – December 2023',
-    link: '#',
   },
   {
     title: 'Keepsake',
-    description: 'A virtual journal app for capturing memories with text and images, featuring mood tracking and timeline functionality.',
+    description: [
+      'A virtual journal app for capturing memories with text and images.',
+      'Features mood tracking and a timeline for easy daily reflection.'
+    ],
     tech: ['HTML', 'CSS', 'Figma'],
     period: 'September 2024 – December 2024',
-    link: '#',
   },
 ]
 
@@ -51,7 +57,11 @@ export default function Projects() {
             >
               <div>
                 <h3 className="text-2xl md:text-3xl font-light mb-4">{project.title}</h3>
-                <p className="text-lg mb-4">{project.description}</p>
+                <ul className="list-disc list-inside space-y-2 mb-4">
+                  {project.description.map((item, i) => (
+                    <li key={i} className="text-lg">{item}</li>
+                  ))}
+                </ul>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span key={tech} className="text-sm border px-3 py-1 rounded-full">
