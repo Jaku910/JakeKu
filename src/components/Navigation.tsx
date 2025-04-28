@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -22,7 +21,7 @@ export default function Navigation() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      const offset = 80 // Adjust this value based on your header height
+      const offset = 80
       const elementPosition = element.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - offset
       window.scrollTo({
@@ -37,34 +36,32 @@ export default function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <button
             onClick={scrollToTop}
-            className="text-xl font-bold hover:text-gray-600 transition-colors"
+            className="text-xl font-light hover:opacity-50 transition-opacity"
           >
             Jake Ku
           </button>
           <div className="flex space-x-8">
             <button
               onClick={() => scrollToSection('resume')}
-              className="text-sm hover:text-gray-600 transition-colors"
+              className="text-sm hover:opacity-50 transition-opacity"
             >
               Works
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-sm hover:text-gray-600 transition-colors"
+              className="text-sm hover:opacity-50 transition-opacity"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-sm hover:text-gray-600 transition-colors"
+              className="text-sm hover:opacity-50 transition-opacity"
             >
               About
             </button>
