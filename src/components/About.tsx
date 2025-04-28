@@ -14,10 +14,13 @@ export default function About() {
           className="text-center"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-            Hi, I'm <span className="text-primary">Jake Ku</span>
+            About Me
           </h1>
           <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
-            A Full Stack Developer specializing in modern web technologies. I blend technical expertise with creative problem-solving to build elegant, user-centric applications.
+            I'm an Informatics & Data Science student at the University of Washington with a passion for using technology to solve real-world problems. My journey in tech started with an interest in how data can be used to improve lives and make better decisions. I combine my technical skills in programming and data analysis with a strong understanding of human-computer interaction to create meaningful solutions.
+          </p>
+          <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
+            When I'm not coding or analyzing data, you can find me exploring new technologies, contributing to open-source projects, or working on personal projects that aim to make a positive impact in my community.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a

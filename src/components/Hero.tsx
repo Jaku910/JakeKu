@@ -48,38 +48,6 @@ export default function Hero() {
             linkedin.com/in/jake-ku
           </a>
         </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          <button 
-            onClick={() => scrollToSection('education')}
-            className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive"
-          >
-            Education
-          </button>
-          <button 
-            onClick={() => scrollToSection('skills')}
-            className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive"
-          >
-            Skills
-          </button>
-          <button 
-            onClick={() => scrollToSection('experience')}
-            className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive"
-          >
-            Experience
-          </button>
-          <button 
-            onClick={() => scrollToSection('projects')}
-            className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive"
-          >
-            Projects
-          </button>
-          <button 
-            onClick={() => scrollToSection('certifications')}
-            className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive"
-          >
-            Certifications
-          </button>
-        </div>
       </div>
     </section>
   )

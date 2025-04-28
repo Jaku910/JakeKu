@@ -40,12 +40,6 @@ export default function Navigation() {
           >
             Projects
           </button>
-          <button 
-            onClick={() => scrollToSection('contact')}
-            className="text-sm hover:opacity-50 transition-opacity"
-          >
-            Contact
-          </button>
         </div>
 
         <button 
@@ -78,12 +72,6 @@ export default function Navigation() {
               className="text-sm hover:opacity-50 transition-opacity"
             >
               Projects
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-sm hover:opacity-50 transition-opacity"
-            >
-              Contact
             </button>
           </div>
         </div>
