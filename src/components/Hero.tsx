@@ -10,6 +10,13 @@ export default function Hero() {
     setIsVisible(true)
   }, [])
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className={`min-h-screen flex items-center justify-center px-6 ${isVisible ? 'visible' : ''}`}>
       <div className="max-w-4xl mx-auto text-center">
@@ -42,21 +49,36 @@ export default function Hero() {
           </a>
         </div>
         <div className="flex flex-wrap justify-center gap-4">
-          <Link href="#education" className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive">
+          <button 
+            onClick={() => scrollToSection('education')}
+            className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive"
+          >
             Education
-          </Link>
-          <Link href="#skills" className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive">
+          </button>
+          <button 
+            onClick={() => scrollToSection('skills')}
+            className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive"
+          >
             Skills
-          </Link>
-          <Link href="#experience" className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive">
+          </button>
+          <button 
+            onClick={() => scrollToSection('experience')}
+            className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive"
+          >
             Experience
-          </Link>
-          <Link href="#projects" className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive">
+          </button>
+          <button 
+            onClick={() => scrollToSection('projects')}
+            className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive"
+          >
             Projects
-          </Link>
-          <Link href="#certifications" className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive">
+          </button>
+          <button 
+            onClick={() => scrollToSection('certifications')}
+            className="px-6 py-2 border border-gray-300 rounded-full text-sm hover:bg-gray-100 transition-colors interactive"
+          >
             Certifications
-          </Link>
+          </button>
         </div>
       </div>
     </section>
