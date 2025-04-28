@@ -23,7 +23,7 @@ export default function Navigation() {
         
         <div className="hidden md:flex space-x-8">
           <button 
-            onClick={() => scrollToSection('works')}
+            onClick={() => scrollToSection('education')}
             className="text-sm hover:opacity-50 transition-opacity"
           >
             Works
@@ -56,7 +56,7 @@ export default function Navigation() {
         <div className="md:hidden absolute top-full left-0 w-full bg-white p-6">
           <div className="flex flex-col space-y-4">
             <button 
-              onClick={() => scrollToSection('works')}
+              onClick={() => scrollToSection('education')}
               className="text-sm hover:opacity-50 transition-opacity"
             >
               Works
