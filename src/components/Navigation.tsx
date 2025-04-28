@@ -1,87 +1,76 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setIsMenuOpen(false) // Close mobile menu after clicking
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
     }
-  }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const offset = 80 // Adjust this value based on your header height
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - offset
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
+  }
+
   return (
-    <nav className="fixed top-0 left-0 w-full p-6 z-50">
-      <div className="flex justify-between items-center">
-        <button 
-          onClick={scrollToTop}
-          className="text-xl font-light hover:opacity-50 transition-opacity"
-        >
-          Jake Ku
-        </button>
-        
-        <div className="hidden md:flex space-x-8">
-          <button 
-            onClick={() => scrollToSection('education')}
-            className="text-sm hover:opacity-50 transition-opacity"
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <button
+            onClick={scrollToTop}
+            className="text-xl font-bold hover:text-gray-600 transition-colors"
           >
-            Works
+            Jake Ku
           </button>
-          <button 
-            onClick={() => scrollToSection('about')}
-            className="text-sm hover:opacity-50 transition-opacity"
-          >
-            About
-          </button>
-          <button 
-            onClick={() => scrollToSection('projects')}
-            className="text-sm hover:opacity-50 transition-opacity"
-          >
-            Projects
-          </button>
-        </div>
-
-        <button 
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <span className="block w-6 h-0.5 bg-black mb-1"></span>
-          <span className="block w-6 h-0.5 bg-black mb-1"></span>
-          <span className="block w-6 h-0.5 bg-black"></span>
-        </button>
-      </div>
-
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white p-6">
-          <div className="flex flex-col space-y-4">
-            <button 
-              onClick={() => scrollToSection('education')}
-              className="text-sm hover:opacity-50 transition-opacity"
+          <div className="flex space-x-8">
+            <button
+              onClick={() => scrollToSection('resume')}
+              className="text-sm hover:text-gray-600 transition-colors"
             >
               Works
             </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-sm hover:opacity-50 transition-opacity"
-            >
-              About
-            </button>
-            <button 
+            <button
               onClick={() => scrollToSection('projects')}
-              className="text-sm hover:opacity-50 transition-opacity"
+              className="text-sm hover:text-gray-600 transition-colors"
             >
               Projects
             </button>
+            <button
+              onClick={() => scrollToSection('about')}
+              className="text-sm hover:text-gray-600 transition-colors"
+            >
+              About
+            </button>
           </div>
         </div>
-      )}
-    </nav>
+      </div>
+    </motion.nav>
   )
 } 
