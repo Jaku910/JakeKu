@@ -4,75 +4,62 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    title: 'Personal Portfolio',
-    description: 'A modern, responsive portfolio website built with Next.js 14, featuring smooth animations and dark mode support.',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'GSAP'],
-    link: 'https://github.com/Jaku910/JakeKu',
+    title: 'Edu4All',
+    description: 'Online College Resource website targeted towards underprivileged and unrepresented communities.',
+    tech: ['Figma', 'Research'],
+    period: 'September 2023 – December 2023',
+    link: '#',
   },
   {
-    title: 'E-commerce Platform',
-    description: 'A full-stack e-commerce solution with real-time inventory management and secure payment processing.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Stripe API', 'Redux'],
-    link: 'https://github.com/Jaku910/ecommerce-platform',
+    title: 'Michelin-Starred Restaurants Analysis',
+    description: 'Data analysis project investigating disparities between countries with and without Michelin-starred establishments.',
+    tech: ['RStudio', 'Data Mining'],
+    period: 'September 2023 – December 2023',
+    link: '#',
   },
   {
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates and team collaboration features.',
-    tech: ['Vue.js', 'Firebase', 'Vuex', 'Material UI', 'WebSocket'],
-    link: 'https://github.com/Jaku910/task-manager',
+    title: 'Keepsake',
+    description: 'A virtual journal app for capturing memories with text and images, featuring mood tracking and timeline functionality.',
+    tech: ['HTML', 'CSS', 'Figma'],
+    period: 'September 2024 – December 2024',
+    link: '#',
   },
 ]
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-padding bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+    <section id="projects" className="min-h-screen py-20 px-8">
+      <div className="max-w-6xl mx-auto">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-4xl md:text-6xl font-light mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">My Projects</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            Here are some of the projects I've worked on
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          Projects
+        </motion.h2>
+        
+        <div className="space-y-32">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+              transition={{ delay: index * 0.2 }}
+              className="grid md:grid-cols-2 gap-8 items-center"
             >
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  {project.description}
-                </p>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-light mb-4">{project.title}</h3>
+                <p className="text-lg mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm"
-                    >
+                    <span key={tech} className="text-sm border px-3 py-1 rounded-full">
                       {tech}
                     </span>
                   ))}
                 </div>
-                <a
-                  href={project.link}
-                  className="text-primary hover:text-primary-dark transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project →
-                </a>
+                <p className="text-sm text-gray-500">{project.period}</p>
               </div>
             </motion.div>
           ))}
