@@ -13,15 +13,40 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-            About Me
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-12">
+            Contact
           </h1>
-          <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
-            I'm an Informatics & Data Science student at the University of Washington with a passion for using technology to solve real-world problems. My journey in tech started with an interest in how data can be used to improve lives and make better decisions. I combine my technical skills in programming and data analysis with a strong understanding of human-computer interaction to create meaningful solutions.
-          </p>
-          <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
-            When I'm not coding or analyzing data, you can find me exploring new technologies, contributing to open-source projects, or working on personal projects that aim to make a positive impact in my community.
-          </p>
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-xl font-medium mb-2">Email</h2>
+              <a 
+                href="mailto:jkmku10@gmail.com" 
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                jkmku10@gmail.com
+              </a>
+            </div>
+            <div>
+              <h2 className="text-xl font-medium mb-2">Phone</h2>
+              <a 
+                href="tel:2534579847" 
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                253-457-9847
+              </a>
+            </div>
+            <div>
+              <h2 className="text-xl font-medium mb-2">LinkedIn</h2>
+              <a 
+                href="https://linkedin.com/in/jake-ku" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                linkedin.com/in/jake-ku
+              </a>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,12 +13,19 @@ export default function Navigation() {
     }
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <nav className="fixed top-0 left-0 w-full p-6 z-50">
       <div className="flex justify-between items-center">
-        <Link href="/" className="text-xl font-light">
+        <button 
+          onClick={scrollToTop}
+          className="text-xl font-light hover:opacity-50 transition-opacity"
+        >
           Jake Ku
-        </Link>
+        </button>
         
         <div className="hidden md:flex space-x-8">
           <button 
