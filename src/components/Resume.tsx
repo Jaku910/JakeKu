@@ -1,11 +1,39 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+
 export default function Resume() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true)
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    const section = document.querySelector('section')
+    if (section) {
+      observer.observe(section)
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section)
+      }
+    }
+  }, [])
+
   return (
-    <section className="max-w-4xl mx-auto px-6 py-12">
+    <section className={`max-w-4xl mx-auto px-6 py-12 ${isVisible ? 'visible' : ''}`}>
       <div className="space-y-16">
         {/* Education */}
-        <div>
+        <div className="interactive">
           <h2 className="text-2xl font-light mb-8">EDUCATION</h2>
           <div className="space-y-8">
             <div>
@@ -24,7 +52,7 @@ export default function Resume() {
         </div>
 
         {/* Skills */}
-        <div>
+        <div className="interactive">
           <h2 className="text-2xl font-light mb-8">SKILLS</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -39,7 +67,7 @@ export default function Resume() {
         </div>
 
         {/* Experience */}
-        <div>
+        <div className="interactive">
           <h2 className="text-2xl font-light mb-8">EXPERIENCE</h2>
           <div className="space-y-12">
             <div>
@@ -87,7 +115,7 @@ export default function Resume() {
         </div>
 
         {/* Projects */}
-        <div>
+        <div className="interactive">
           <h2 className="text-2xl font-light mb-8">PROJECTS</h2>
           <div className="space-y-12">
             <div>
@@ -111,7 +139,7 @@ export default function Resume() {
         </div>
 
         {/* Certifications */}
-        <div>
+        <div className="interactive">
           <h2 className="text-2xl font-light mb-8">CERTIFICATIONS</h2>
           <ul className="text-gray-600 space-y-2">
             <li>AT&T 2024 Technology Academy Certification (June 2024)</li>
