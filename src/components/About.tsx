@@ -22,24 +22,6 @@ export default function About() {
           <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
             When I'm not coding or analyzing data, you can find me exploring new technologies, contributing to open-source projects, or working on personal projects that aim to make a positive impact in my community.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <motion.a
-              href="#projects"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-primary text-white px-8 py-3 rounded-full font-medium"
-            >
-              View My Work
-            </motion.a>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-primary text-primary px-8 py-3 rounded-full font-medium"
-            >
-              Contact Me
-            </motion.a>
-          </div>
         </motion.div>
       </div>
     </section>
