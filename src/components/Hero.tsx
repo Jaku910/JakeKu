@@ -7,8 +7,11 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl font-light mb-8">
           Jake Ku
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 mb-12">
-          Data Science Student & Developer
+        <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Informatics major with a minor in Data Science at the University of Washington.
+        </p>
+        <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+          Passionate about human interaction, data analytics, and technology that improves lives.
         </p>
         <div className="flex justify-center space-x-4">
           <a 
